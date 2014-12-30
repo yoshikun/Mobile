@@ -10,6 +10,9 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\tests">
+      <UniqueIdentifier>{0c934669-5f2c-47f0-a9ae-8527b30c2026}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,6 +27,12 @@
     <ClCompile Include="..\Classes\TestScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\ClippingNodeTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CompressPngTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -37,6 +46,15 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TestScene.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ClippingNodeTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CompressPngTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Test.h">
+      <Filter>src\tests</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

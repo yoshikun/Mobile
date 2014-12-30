@@ -23,8 +23,7 @@ public:
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 private:
-	void loadCallBack(cocos2d::Texture2D* texture);
-	Image* getImageFromZip(ZipFile* zip, const std::string& value);
+
 };
 
 #endif // __HELLOWORLD_SCENE_H__
