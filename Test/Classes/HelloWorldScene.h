@@ -2,6 +2,11 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "CCImage.h"
+#include "base/ZipUtils.h"
+#include <string>
+
+USING_NS_CC;
 
 class HelloWorld : public cocos2d::Layer
 {
@@ -19,6 +24,7 @@ public:
     CREATE_FUNC(HelloWorld);
 private:
 	void loadCallBack(cocos2d::Texture2D* texture);
+	Image* getImageFromZip(ZipFile* zip, const std::string& value);
 };
 
 #endif // __HELLOWORLD_SCENE_H__

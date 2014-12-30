@@ -1,4 +1,6 @@
 #include "HelloWorldScene.h"
+#include "base/ZipUtils.h"
+#include "CCImage.h"
 
 USING_NS_CC;
 
@@ -71,10 +73,52 @@ bool HelloWorld::init()
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
+ 
+	std::string fullpath = FileUtils::getInstance()->fullPathForFilename("atlas_compress.png");
+	auto zip = new ZipFile(fullpath);
+	fullpath = fullpath.substr(fullpath.rfind('/') + 1, fullpath.length());
+	auto data = getImageFromZip(zip, "atlas_data");
+	auto mask = getImageFromZip(zip, "atlas_mask");
+
+	ssize_t png_size = mask->getDataLen() * 4;
+
+	unsigned char* buffer = {}; 
+	buffer = (unsigned char*)malloc(sizeof(unsigned char) * png_size);
+	memset(buffer, 0, png_size);
+
+	for (int i = 0, j = 0, k = 0; j < png_size; i++, j += 4, k += 3)
+	{
+		buffer[j] = data->getData()[k];
+		buffer[j + 1] = data->getData()[k + 1];
+		buffer[j + 2] = data->getData()[k + 2];
+		buffer[j + 3] = mask->getData()[i];
+	}
+	auto texture = new Texture2D();
+	texture->initWithData(buffer, png_size, Texture2D::PixelFormat::RGBA8888, mask->getWidth(), mask->getHeight(), Size(mask->getWidth(), mask->getHeight()));
+
+	auto atlas = Sprite::createWithTexture(texture);
+	atlas->setPosition(Vec2(visibleSize.width / 2 + origin.x, visibleSize.height / 2 + origin.y));
+	this->addChild(atlas, 0);
     
+	free(buffer);
+	CC_SAFE_DELETE(zip);
+
     return true;
 }
 
+Image* HelloWorld::getImageFromZip(ZipFile* zip, const std::string& value)
+{
+	ssize_t size = 0;
+	auto data = zip->getFileData(value, &size);
+	if (!data)
+	{
+		return nullptr;
+	}
+	auto image = new Image();
+	image->initWithImageData(data, size);
+	image->autorelease();
+	return image;
+}
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
