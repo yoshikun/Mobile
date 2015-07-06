@@ -10,6 +10,18 @@
     <Filter Include="src">
       <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\tests">
+      <UniqueIdentifier>{0c934669-5f2c-47f0-a9ae-8527b30c2026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\luaBridge">
+      <UniqueIdentifier>{0585f275-a4cb-4883-8fbd-aa137a6c6dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\luaBridge\detail">
+      <UniqueIdentifier>{46d27a16-d306-426a-8caa-081c58a3e540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\lua">
+      <UniqueIdentifier>{b2fe3912-5e57-4bd8-84aa-7956d504da1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,6 +36,120 @@
     <ClCompile Include="..\Classes\TestScene.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\ClippingNodeTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CompressPngTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ActionTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\VisibleRect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\EventTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\BaseTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\LuaBridgeTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lapi.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lauxlib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lbaselib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lcode.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldblib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldebug.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldo.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldump.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lfunc.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lgc.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\linit.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\liolib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\llex.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lmathlib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lmem.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\loadlib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lobject.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lopcodes.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\loslib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lparser.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lstate.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lstring.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lstrlib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ltable.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ltablib.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\ltm.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lua.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lundump.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lvm.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\lzio.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
+    <ClCompile Include="..\cocos2d\external\lua\lua\print.c">
+      <Filter>src\lua</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -37,6 +163,144 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TestScene.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ClippingNodeTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CompressPngTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ActionTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\VisibleRect.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\EventTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\LuaBridge.h">
+      <Filter>src\luaBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\RefCountedObject.h">
+      <Filter>src\luaBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\RefCountedPtr.h">
+      <Filter>src\luaBridge</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\CFunctions.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\ClassInfo.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\Constructor.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\dump.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\FuncTraits.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\Iterator.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\LuaException.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\LuaHelpers.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\LuaRef.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\Namespace.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\Stack.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\TypeList.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\TypeTraits.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridge\detail\Userdata.h">
+      <Filter>src\luaBridge\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\LuaBridgeTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lapi.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lauxlib.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lcode.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\ldebug.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\ldo.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lfunc.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lgc.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\llex.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\llimits.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lmem.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lobject.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lopcodes.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lparser.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lstate.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lstring.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\ltable.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\ltm.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lua.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\luaconf.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lualib.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lundump.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lvm.h">
+      <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\cocos2d\external\lua\lua\lzio.h">
+      <Filter>src\lua</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

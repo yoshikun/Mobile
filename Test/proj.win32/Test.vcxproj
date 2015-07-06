@@ -66,6 +66,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LibraryPath>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\lib;$(LibraryPath)</LibraryPath>
@@ -73,7 +74,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(EngineRoot)cocos\audio\include;$(EngineRoot)external;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)extensions;..\Classes;..;..\..\TestLib\Classes;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\luajit\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USE_MATH_DEFINES;GL_GLEXT_PROTOTYPES;CC_ENABLE_CHIPMUNK_INTEGRATION=1;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -86,7 +87,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>lua51.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -137,15 +138,99 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     </PreLinkEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\Classes\ActionTest.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\BaseTest.cpp" />
+    <ClCompile Include="..\Classes\ClippingNodeTest.cpp" />
+    <ClCompile Include="..\Classes\CompressPngTest.cpp" />
+    <ClCompile Include="..\Classes\EventTest.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\LuaBridgeTest.cpp" />
     <ClCompile Include="..\Classes\TestScene.cpp" />
+    <ClCompile Include="..\Classes\VisibleRect.cpp" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lapi.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lauxlib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lbaselib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lcode.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldblib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldebug.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldo.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ldump.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lfunc.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lgc.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\linit.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\liolib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\llex.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lmathlib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lmem.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\loadlib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lobject.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lopcodes.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\loslib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lparser.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lstate.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lstring.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lstrlib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ltable.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ltablib.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\ltm.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lua.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lundump.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lvm.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\lzio.c" />
+    <ClCompile Include="..\cocos2d\external\lua\lua\print.c" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Classes\ActionTest.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\ClippingNodeTest.h" />
+    <ClInclude Include="..\Classes\CompressPngTest.h" />
+    <ClInclude Include="..\Classes\EventTest.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\LuaBridgeTest.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\CFunctions.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\ClassInfo.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\Constructor.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\dump.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\FuncTraits.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\Iterator.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\LuaException.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\LuaHelpers.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\LuaRef.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\Namespace.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\Stack.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\TypeList.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\TypeTraits.h" />
+    <ClInclude Include="..\Classes\LuaBridge\detail\Userdata.h" />
+    <ClInclude Include="..\Classes\LuaBridge\LuaBridge.h" />
+    <ClInclude Include="..\Classes\LuaBridge\RefCountedObject.h" />
+    <ClInclude Include="..\Classes\LuaBridge\RefCountedPtr.h" />
     <ClInclude Include="..\Classes\TestScene.h" />
+    <ClInclude Include="..\Classes\VisibleRect.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lapi.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lauxlib.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lcode.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\ldebug.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\ldo.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lfunc.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lgc.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\llex.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\llimits.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lmem.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lobject.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lopcodes.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lparser.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lstate.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lstring.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\ltable.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\ltm.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lua.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\luaconf.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lualib.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lundump.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lvm.h" />
+    <ClInclude Include="..\cocos2d\external\lua\lua\lzio.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
