@@ -6,6 +6,10 @@
 #include "ClippingNodeTest.h"
 #include "CompressPngTest.h"
 #include "base/CCEventListenerTouch.h"
+#include "ActionTest.h"
+#include "VisibleRect.h"
+#include "EventTest.h"
+#include "LuaBridgeTest.h"
 
 TestScene::~TestScene()
 {
@@ -19,18 +23,24 @@ TestScene::TestScene()
 	//初始化菜单项
 	_menuFunctionMap["PngCompressTest"] = []() {return CompressPngTest::create();};
 	_menuFunctionMap["ClippinNodeTest"] = []() {return ClippingNodeTest::create();};
+	_menuFunctionMap["ActionTest"] = []() {return ActionTest::create();};
+	_menuFunctionMap["EventTest"] = []() {return EventTest::create();};
+	_menuFunctionMap["LuaBridgeTest"] = []() {return LuaBridgeTest::create();};
 }
 
 bool TestScene::init()
 {
-	Size size = Director::getInstance()->getVisibleSize();
+	if (!Scene::init())
+	{
+		return false;
+	}
 
 	auto layer = Layer::create();
 	this->addChild(layer);
 
 	//创建菜单
 	_menu = Menu::create();
-	_menu->setPosition(Vec2(size.width / 2, size.height / 2));
+	_menu->setPosition(VisibleRect::center());
 	layer->addChild(_menu);
 
 	auto nameIter = _menuFunctionMap.begin();

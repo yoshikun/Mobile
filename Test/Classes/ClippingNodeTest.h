@@ -1,10 +1,10 @@
 ﻿#ifndef __CLIPPING__NODE__H__
 #define __CLIPPING__NODE__H__
 
-#include "Test.h"
+#include "BaseTest.h"
 #include "CCPlatformMacros.h"
 
-class ClippingNodeTest : public Test
+class ClippingNodeTest : public BaseTest
 {
 public:
 	ClippingNodeTest();

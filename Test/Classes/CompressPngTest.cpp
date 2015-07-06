@@ -22,6 +22,11 @@ CompressPngTest::CompressPngTest()
 
 bool CompressPngTest::init()
 {
+	if (!BaseTest::init())
+	{
+		return false;
+	}
+
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Vec2 origin = Director::getInstance()->getVisibleOrigin();
 

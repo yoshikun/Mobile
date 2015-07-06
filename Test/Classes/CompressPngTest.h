@@ -2,11 +2,11 @@
 #ifndef __COMPRESS__PNG__H__
 #define __COMPRESS__PNG__H__
 
-#include "Test.h"
+#include "BaseTest.h"
 #include "renderer/CCTexture2D.h"
 #include "base/ZipUtils.h"
 
-class CompressPngTest : public Test
+class CompressPngTest : public BaseTest
 {
 public:
 	CompressPngTest();

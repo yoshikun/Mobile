@@ -4,7 +4,7 @@
 #include "CCPlatformMacros.h"
 #include "2d/CCScene.h"
 #include "base/CCRef.h"
-#include "Test.h"
+#include "BaseTest.h"
 #include "2d/CCMenu.h"
 
 USING_NS_CC;
@@ -17,13 +17,14 @@ public:
 
 	virtual bool init();
 
+	CREATE_FUNC(TestScene);
 protected:
 	
 private:
 	Menu* _menu;
-	Test* _currentTest;
+	BaseTest* _currentTest;
 	const int V_PADDING;
-	std::map<std::string, std::function<Test*()>> _menuFunctionMap;
+	std::map<std::string, std::function<BaseTest*()>> _menuFunctionMap;
 
 	void MenuItemCallBack(Ref* sender);
 	

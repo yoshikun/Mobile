@@ -11,11 +11,16 @@ ClippingNodeTest::~ClippingNodeTest()
 
 ClippingNodeTest::ClippingNodeTest()
 {
-
+	//测试发现用shap作为遮罩在手机上会无法显示,最好还是用sprite加载图片做遮罩
 }
 
 bool ClippingNodeTest::init()
 {
+	if (!BaseTest::init())
+	{
+		return false;
+	}
+
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 
 	auto layer = Layer::create();
