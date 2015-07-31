@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+﻿#ifndef __TEST_SCENE__H__
+#define	__TEST_SCENE__H__
+
+class TestScene
+=======
 ﻿#ifndef __TEST__SCENE__H__
 #define __TEST__SCENE__H__
 
@@ -10,10 +16,18 @@
 USING_NS_CC;
 
 class TestScene : public Scene
+>>>>>>> 70ab6f4eefabce28cebb6d176be76eaff1e352db
 {
 public:
 	TestScene();
 	~TestScene();
+<<<<<<< HEAD
+protected:
+
+private:
+};
+#endif
+=======
 
 	virtual bool init();
 
@@ -31,3 +45,4 @@ private:
 };
 
 #endif
+>>>>>>> 70ab6f4eefabce28cebb6d176be76eaff1e352db

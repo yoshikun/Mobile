@@ -1,4 +1,8 @@
 ﻿#include "TestScene.h"
+<<<<<<< HEAD
+
+TestScene::TestScene()
+=======
 #include "2d/CCMenuItem.h"
 #include "2d/CCLabel.h"
 #include "2d/CCMenu.h"
@@ -13,10 +17,18 @@
 #include "Xml2BinTest.h"
 
 TestScene::~TestScene()
+>>>>>>> 70ab6f4eefabce28cebb6d176be76eaff1e352db
 {
 
 }
 
+<<<<<<< HEAD
+TestScene::~TestScene()
+{
+
+}
+
+=======
 TestScene::TestScene()
 	: V_PADDING(40)
 	, _currentTest(nullptr)
@@ -78,3 +90,4 @@ void TestScene::MenuItemCallBack(Ref* sender)
 
 	_menu->setVisible(false);
 }
+>>>>>>> 70ab6f4eefabce28cebb6d176be76eaff1e352db
