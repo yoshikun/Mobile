@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 编辑使用 XMLSpy v2006 U (http://www.altova.com) 由 any (any) -->
+<!-- edited with XMLSpy v2010 rel. 3 sp1 (http://www.altova.com) by blue (yi) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="Addiction">
+		<xs:annotation>
+			<xs:documentation>沉迷配置</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="baseID" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="duration" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>沉迷所属时间段(分钟)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="isTired" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>是否到疲劳时间</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="durationStr" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>沉迷通知内容</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="notifyDuration" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>通知间隔(分钟)</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="income" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>收益影响比例</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="needOffline" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>是否强制下线</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="AddictionList">
+		<xs:annotation>
+			<xs:documentation>防沉迷列表</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="addictionSwitch" type="xs:int">
+					<xs:annotation>
+						<xs:documentation>防沉迷检查开关</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="minorNotify" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>未成年通知</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="tireNotify" type="xs:string">
+					<xs:annotation>
+						<xs:documentation>疲劳时间登录通知</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element ref="Addiction" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>沉迷</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
