@@ -10,6 +10,7 @@
 #include "VisibleRect.h"
 #include "EventTest.h"
 #include "LuaBridgeTest.h"
+#include "Xml2BinTest.h"
 
 TestScene::~TestScene()
 {
@@ -26,6 +27,7 @@ TestScene::TestScene()
 	_menuFunctionMap["ActionTest"] = []() {return ActionTest::create();};
 	_menuFunctionMap["EventTest"] = []() {return EventTest::create();};
 	_menuFunctionMap["LuaBridgeTest"] = []() {return LuaBridgeTest::create();};
+	_menuFunctionMap["Xml2BinTest"] = []() {return Xml2BinTest::create();};
 }
 
 bool TestScene::init()

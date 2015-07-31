@@ -13,14 +13,17 @@
     <Filter Include="src\tests">
       <UniqueIdentifier>{0c934669-5f2c-47f0-a9ae-8527b30c2026}</UniqueIdentifier>
     </Filter>
-    <Filter Include="src\luaBridge">
-      <UniqueIdentifier>{0585f275-a4cb-4883-8fbd-aa137a6c6dc3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="src\luaBridge\detail">
-      <UniqueIdentifier>{46d27a16-d306-426a-8caa-081c58a3e540}</UniqueIdentifier>
-    </Filter>
     <Filter Include="src\lua">
       <UniqueIdentifier>{b2fe3912-5e57-4bd8-84aa-7956d504da1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\LuaBridge">
+      <UniqueIdentifier>{0585f275-a4cb-4883-8fbd-aa137a6c6dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\LuaBridge\detail">
+      <UniqueIdentifier>{46d27a16-d306-426a-8caa-081c58a3e540}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\utils">
+      <UniqueIdentifier>{7133c133-e92c-44f7-a3ed-c72908868de1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +153,12 @@
     <ClCompile Include="..\cocos2d\external\lua\lua\print.c">
       <Filter>src\lua</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Xml2BinTest.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\StringUtil.cpp">
+      <Filter>src\utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -180,55 +189,55 @@
       <Filter>src\tests</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\LuaBridge.h">
-      <Filter>src\luaBridge</Filter>
+      <Filter>src\LuaBridge</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\RefCountedObject.h">
-      <Filter>src\luaBridge</Filter>
+      <Filter>src\LuaBridge</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\RefCountedPtr.h">
-      <Filter>src\luaBridge</Filter>
+      <Filter>src\LuaBridge</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\CFunctions.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\ClassInfo.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\Constructor.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\dump.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\FuncTraits.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\Iterator.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\LuaException.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\LuaHelpers.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\LuaRef.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\Namespace.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\Stack.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\TypeList.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\TypeTraits.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridge\detail\Userdata.h">
-      <Filter>src\luaBridge\detail</Filter>
+      <Filter>src\LuaBridge\detail</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\LuaBridgeTest.h">
       <Filter>src\tests</Filter>
@@ -301,6 +310,18 @@
     </ClInclude>
     <ClInclude Include="..\cocos2d\external\lua\lua\lzio.h">
       <Filter>src\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\BaseTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Xml2BinTest.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\StringUtil.h">
+      <Filter>src\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ByteBuffer.h">
+      <Filter>src\utils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

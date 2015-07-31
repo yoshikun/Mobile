@@ -228,6 +228,8 @@ bool ActionTest::init()
 	auto data = nullptr;
 	//auto callBack2 = [](CCNode* sender, void* data){log("This is callBack2");};
 	auto func2 = CCCallFuncND::create(this, callfuncND_selector(ActionTest::callBack2), data);
+
+	return true;
 }
 
 void ActionTest::callBack2(CCNode* sender, void* data)
